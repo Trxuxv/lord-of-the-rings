@@ -10,10 +10,24 @@
     overflow: hidden;
 }
 
-.back-promo-wal{
+.back-promo-wal {
     margin-left: -11%;
     transform: skew(20deg);
     background-image: url('./../../assets/11.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.back-prod {
+    padding: 0 8%;
+    background-color: #cdb385;
+}
+
+.products {
+    background-color: #cdb385;
+}
+
+.cart-icon{
+    margin-top: -93%;
+    margin-left: -2%;
 }
