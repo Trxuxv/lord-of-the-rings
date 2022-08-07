@@ -9,7 +9,7 @@ export default function Home() {
     const [cart, setEmployees] = useState(initialState);
 
     const addObjectToArray = obj => {
-        var name = itemsLR.find(x => x.id == obj).name;
+        var name = itemsLR.find(x => x.id === obj).name;
         alert("item " + name + " added")
         console.log(cart)
         setEmployees(current => [...current, obj]);
