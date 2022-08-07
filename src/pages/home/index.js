@@ -3,9 +3,7 @@ import React from 'react';
 import './index.css';
 
 export default function Home() {
-
     const initialState = [];
-
     const [cart, setEmployees] = useState(initialState);
 
     const addObjectToArray = obj => {
@@ -21,8 +19,8 @@ export default function Home() {
                 <div className='w-2/6 '></div>
                 <div className='w-1/6 '></div>
                 <div className='w-1/6 '></div>
-                {movies.map(movie => {
-                    return <div className='w-1/6 font-bold text-slate-600  text-center'>{movie.name}</div>
+                {menu.map(m => {
+                    return <div className='w-1/6 font-bold text-slate-600  text-center'>{m.name}</div>
                 })}
                 <div className='w-1/6 font-bold text-slate-600 text-center'>Profile</div>
                 <div className='w-1/6 font-bold text-slate-600 flex justify-center items-center text-center'>
@@ -64,24 +62,25 @@ export default function Home() {
                         high-fantasy novel by English author and scholar J. R. R. Tolkien. Set in Middle-earth, intended to be Earth at some time in the distant past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.
                     </p>
                     <div>
-                        <button className='rounded-full border-2 border-black bg-black text-white py-2 px-5 text-2x1 mr-6'>Get items</button>
-                        <button className='rounded-full border-2 border-black bg-white text-black py-2 px-5 text-2x1'>Get items</button>
+                        <button className='rounded-full border-2 border-black bg-black text-white py-2 px-5 text-2x1 mr-6'>Check the history</button>
+                        <button className='rounded-full border-2 border-black bg-white text-black py-2 px-5 text-2x1'>Movies in order </button>
                         <button></button>
                     </div>
                 </div>
                 <div className='w-3/5 bg-orange-900 h-full back-promo'>
                     <div className='back-promo-wal w-5/6 h-full'>
-
                     </div>
                 </div>
             </div>
-            <div className='w-full h-auto back-prod py-10'>
+            <div className='w-full h-auto back-prod py-10 bg-gradient-to-r from-slate-400 to-orange-200'>
                 <div className='products'>
-                    <h1 className='text-5xl text-center py-3 font-bold'>Main items</h1>
+                    <h1 className='text-5xl text-center py-10 font-bold'>
+                        Check the main products of <b className='text-5xl font-bold text-orange-900'>Lord of the Rings</b>
+                    </h1>
                     <div className='w-full grid grid-cols-4'>
                         {itemsLR.map(item => (
                             <div className="card bg-white m-6 p-6 text-center rounded-lg">
-                                <img className='rounded-lg border-2 border-slate-400' src={require(`./../../assets/LR_Swords/${item.imageUrl}`)} alt={item.imageUrl} />
+                                <img className='rounded-lg border-2 border-slate-300' src={require(`./../../assets/LR_Swords/${item.imageUrl}`)} alt={item.imageUrl} />
                                 <div className="m-2 text-center h-14">{item.name}</div>
                                 <button onClick={() =>
                                     addObjectToArray(item.id)
@@ -94,6 +93,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className='bg-black h-2/5'>
+
+            </div>
         </div>
     );
 }
@@ -105,7 +107,7 @@ function logout() {
     document.location.reload(true);
 }
 
-var movies = [
+var menu = [
     {
         id: 1,
         name: "Home",
@@ -179,16 +181,21 @@ var itemsLR = [
     {
         id: 9,
         name: "Lord Of The Rings Ringwraith Sword",
-        imageUrl: "3.jfif"
-    }, {
+        imageUrl: "9.jfif"
+    },
+    {
         id: 10,
-        name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
-        imageUrl: "3.jfif"
+        name: "The Lord Of The Rings: Officially Licensed Hadhafang Sword Of Arwen Evenstar With Display Stand",
+        imageUrl: "10.jfif"
     },
     {
         id: 11,
-        name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
-        imageUrl: "3.jfif"
+        name: "The Lord Of The Rings Sword Of Strider",
+        imageUrl: "11.jfif"
     },
-
+    {
+        id: 12,
+        name: "Sting Scabbard",
+        imageUrl: "12.jfif"
+    },
 ]
