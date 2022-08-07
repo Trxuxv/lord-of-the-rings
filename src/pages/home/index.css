@@ -1,5 +1,19 @@
-.logo{
+.logo {
     background-image: url(./../../assets/7.png);
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.back-promo {
+    transform: skew(-20deg);
+    margin-right: -15%;
+    overflow: hidden;
+}
+
+.back-promo-wal{
+    margin-left: -11%;
+    transform: skew(20deg);
+    background-image: url('./../../assets/11.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
