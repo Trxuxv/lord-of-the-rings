@@ -16,7 +16,7 @@ export default function Home() {
 
     return (
         <div className='w-full h-screen overflow-x-hidden'>
-            <nav className='w-full h-16 flex justify-center items-center'>
+            <nav className='w-full h-16 flex justify-center items-center cursor-pointer'>
                 <div className='w-1/6 float-left logo h-10 ml-4'></div>
                 <div className='w-2/6 '></div>
                 <div className='w-1/6 '></div>
@@ -25,19 +25,32 @@ export default function Home() {
                     return <div className='w-1/6 font-bold text-slate-600  text-center'>{movie.name}</div>
                 })}
                 <div className='w-1/6 font-bold text-slate-600 text-center'>Profile</div>
-                <div className='w-1/6 font-bold text-slate-600 flex justify-center items-center  text-center'>
+                <div className='w-1/6 font-bold text-slate-600 flex justify-center items-center text-center'>
                     Cart
-                    <div className='w-10 h-6 ml-2'>
-                        <div className='cart-icon mb-6 text-white text-xs w-4 flex justify-center items-center h-4 font-bold bg-red-600 rounded-full'>{cart.length}</div>
+                    <div className='w-10 h-6 ml-2 mt-2'>
                         <svg aria-hidden="true" className="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                        <div className='cart-icon mb-6 text-white text-xs w-4 flex justify-center items-center h-4 font-bold bg-red-600 rounded-full'>{cart.length}</div>
                     </div>
                 </div>
-                <div className='w-1/6 font-bold text-slate-600  text-center' onClick={logout}>Logout</div>
+                <div onClick={logout} className='w-1/6 font-bold text-slate-600 flex justify-center items-center  text-center'>
+                    Logout
+                    <div className='w-10 h-6 ml-2'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                    </div>
+                </div>
             </nav>
-            <div className='w-full h-10 bg-slate-200 flex justify-center items-center'>
+            <div className='w-full h-10 flex justify-center items-center  cursor-pointer' style={{ background: "rgb(230 227 216)" }}>
+                <div className='w-1/6 text-center'></div>
+                <div className='w-1/6 text-center'></div>
+                <div className='w-1/6 text-center'></div>
                 {categories.map(movie => {
-                    return <div className='w-1/6 text-center' key={`movie-${movie.id}`}>{movie.name}</div>
+                    return <div className='w-1/6 text-center h-full flex justify-center items-center rounded-b-lg mr-1'>{movie.name}</div>
                 })}
+                <div className='w-1/6 text-center'></div>
+                <div className='w-1/6 text-center'></div>
+                <div className='w-1/6 text-center'></div>
             </div>
             <div className='w-full h-4/6 text-center flex justify-center items-center'>
                 <div className='w-2/3'>
@@ -46,7 +59,7 @@ export default function Home() {
                         <span className='text-5xl'>All the items and features </span><br />
                         <span className='text-5xl'>of the saga</span>
                     </h1>
-                    <p className='w-2/6 m-auto my-6'>
+                    <p className='w-4/6 m-auto my-6'>
                         The Lord of the Rings is an epic
                         high-fantasy novel by English author and scholar J. R. R. Tolkien. Set in Middle-earth, intended to be Earth at some time in the distant past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.
                     </p>
@@ -114,19 +127,11 @@ var categories = [
     },
     {
         id: 3,
-        name: "categoria 3",
+        name: "Books",
     },
     {
         id: 4,
-        name: "categoria 4",
-    },
-    {
-        id: 5,
-        name: "categoria 5",
-    },
-    {
-        id: 6,
-        name: "categoria 6",
+        name: "Cities",
     }
 ];
 

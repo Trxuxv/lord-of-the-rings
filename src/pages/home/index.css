@@ -21,13 +21,13 @@
 .back-prod {
     padding: 0 8%;
     background-color: #cdb385;
-}
-
-.products {
-    background-color: #cdb385;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .cart-icon{
-    margin-top: -93%;
-    margin-left: -2%;
+    font-size: 0.6rem;
+    margin-top: -83%;
+    margin-left: 25%;
 }

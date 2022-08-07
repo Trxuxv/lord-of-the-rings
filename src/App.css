@@ -1,5 +1,6 @@
 .main {
-  background-image: url('./assets/4.jpg');
+  /* background-image: url('./assets/4.jpg'); */
+  background-color: #f3e9d9;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +21,7 @@
 
 .container {
   z-index: 3;
-  box-shadow: 0 0 15px 10px #bd905c80;
+  box-shadow: 0 0 15px 10px #807562;
 }
 
 .land {

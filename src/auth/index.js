@@ -2,7 +2,7 @@ export default function Auth() {
 
     return (
         <>
-            <div className="bg-slate-300 w-full h-screen flex justify-center items-center main">
+            <div className="w-full h-screen flex justify-center items-center main">
                 <div className="m-auto w-4/5 h-4/5 bg-white rounded-lg flex container">
                     <div className="w-2/5 text-center flex flex-col pt-6">
                         <div className="pt-10 px-20 h-2/6  rounded-lg">
@@ -10,7 +10,9 @@ export default function Auth() {
                             </div>
                         </div>
                         <div className="p-6">
-                            <form className="bg-gradient-to-r from-slate-200 to-orange-200 p-6 text-left rounded-lg">
+                            <form className="bg-gradient-to-r from-slate-200 to-orange-200 px-6 pb-4 text-left rounded-lg">
+                                <h2 className="text-center text-4xl font-bold mb-2 pt-3 pb-5">Sign up</h2>
+                                <hr/>
                                 <div className="grid md:grid-cols-2 md:gap-6">
                                     <div className="relative z-0 mb-6 w-full group">
                                         <input type="text" name="floating_first_name" id="firstName" className="block py-2.5 px-0 w-full text-sm text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-orange-500 focus:outline-none focus:ring-0 focus:border-orange-600 peer" placeholder=" " required="" />
