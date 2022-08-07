@@ -9,6 +9,8 @@ export default function Home() {
     const [cart, setEmployees] = useState(initialState);
 
     const addObjectToArray = obj => {
+        var name = itemsLR.find(x => x.id == obj).name;
+        alert("item " + name + " added")
         console.log(cart)
         setEmployees(current => [...current, obj]);
     };
@@ -124,27 +126,27 @@ var itemsLR = [
     },
     {
         id: 5,
-        name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
-        imageUrl: "3.jfif"
+        name: "LOTR™ - STING™ The Sword Of Frodo Baggins With Wall Plaque",
+        imageUrl: "5.jfif"
     },
     {
         id: 6,
-        name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
-        imageUrl: "3.jfif"
+        name: "LOTR™ Officially Licensed Glamdring Sword Of Gandalf",
+        imageUrl: "6.jfif"
     },
     {
         id: 7,
-        name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
-        imageUrl: "3.jfif"
+        name: "Sword Of The Witch King",
+        imageUrl: "7.jfif"
     },
     {
         id: 8,
-        name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
-        imageUrl: "3.jfif"
+        name: "Sword Of Narsil",
+        imageUrl: "8.jfif"
     },
     {
         id: 9,
-        name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
+        name: "Lord Of The Rings Ringwraith Sword",
         imageUrl: "3.jfif"
     }, {
         id: 10,
