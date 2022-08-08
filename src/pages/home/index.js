@@ -165,12 +165,65 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-black h-2/5"></div>
+      <footer class="bg-gray-100 text-center">
+        <div class="px-6 pt-6">
+          <form action="">
+            <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
+              <div class="md:ml-auto md:mb-6">
+                <p class="text-gray-800">
+                  <strong>Sign up for more websites like this</strong>
+                </p>
+              </div>
+
+              <div class="md:mb-6">
+                <input
+                  type="text"
+                  class="
+              form-control
+              block
+              w-full
+              px-3
+              py-1.5
+              text-base
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0
+              focus:text-gray-700 focus:bg-white focus:border-orange-600 focus:outline-none
+            "
+                  id="exampleFormControlInput1"
+                  placeholder="Email address"
+                />
+              </div>
+
+              <div class="md:mr-auto mb-6">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-yellow-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="text-center text-gray-700 p-4">
+          © 2022 Copyright:
+          <a class="text-gray-800" href="https://tailwind-elements.com/">
+            Débora Ferreira <i>@Dev</i>
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
 
-var name = localStorage.getItem("name");
+// var name = localStorage.getItem("name");
 
 function logout() {
   localStorage.clear();
@@ -255,7 +308,7 @@ var itemsLR = [
   },
   {
     id: 10,
-    name: "The Lord Of The Rings: Officially Licensed Hadhafang Sword Of Arwen Evenstar With Display Stand",
+    name: "Officially Licensed Hadhafang Sword Of Arwen Evenstar",
     imageUrl: "10.jfif",
   },
   {
