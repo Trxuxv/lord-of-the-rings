@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Product from "./../products/index";
 import Profile from "./../profile/index";
-import Items from "./../items/index";
 import Cart from "./../cart/index";
 import { useState } from "react";
 import React from "react";
@@ -63,12 +62,22 @@ export default function Home() {
             developed into a much larger work.
           </p>
           <div>
-            <button className="rounded-full border-2 border-black bg-black text-white py-2 px-5 text-2x1 mr-6 hover:bg-white hover:text-black">
-              Check the history
-            </button>
-            <button className="rounded-full border-2 border-black bg-white text-black py-2 px-5 text-2x1 hover:bg-orange-900 hover:text-white hover:border-orange-900">
-              Movies in order{" "}
-            </button>
+            <a
+              href="https://en.wikipedia.org/wiki/The_History_of_The_Lord_of_the_Rings#:~:text=The%20History%20of%20The%20Lord%20of%20the%20Rings%20is%20a,earth%20(%22HoME%22)"
+              target={"blank"}
+            >
+              <button className="rounded-full border-2 border-black bg-black text-white py-2 px-5 text-2x1 mr-6 hover:bg-white hover:text-black">
+                Check the history
+              </button>
+            </a>
+            <a
+              href="https://www.pocket-lint.com/tv/news/155647-lord-of-the-rings-the-hobbit-best-movie-order"
+              target={"blank"}
+            >
+              <button className="rounded-full border-2 border-black bg-white text-black py-2 px-5 text-2x1 hover:bg-orange-900 hover:text-white hover:border-orange-900">
+                Movies in order{" "}
+              </button>
+            </a>
             <button></button>
           </div>
         </div>
@@ -270,7 +279,7 @@ export default function Home() {
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="items" element={<Items />} />
+          {/* <Route path="items" element={<Items />} /> */}
           <Route path="profile" element={<Profile />} />
           <Route path="product" element={<Product />} />
         </Routes>
@@ -287,11 +296,6 @@ var menu = [
   },
   {
     id: 2,
-    name: "Items",
-    link: "items",
-  },
-  {
-    id: 3,
     name: "Profile",
     link: "profile",
   },
