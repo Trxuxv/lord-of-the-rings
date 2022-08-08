@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 
 const itemsLR = [
   {
@@ -99,9 +100,13 @@ const itemsLR = [
   },
 ];
 
-function cleanCart() {
+function OnCleanCart() {
   localStorage.removeItem("cart");
   document.location.reload(true);
+}
+
+function OnRemove() {
+  alert("remove");
 }
 
 export default function Cart() {
@@ -128,12 +133,13 @@ export default function Cart() {
     });
 
     return (
-      <div className="w-full flex justify-center items-center h-5/6 bg-gradient-to-r from-slate-400 to-orange-200 h-full">
-        <div className="flex h-5/6 flex-col overflow-y-scroll bg-white rounded-lg shadow-xl w-5/6">
+      <div className="w-full flex justify-center items-center bg-gradient-to-r from-slate-400 to-orange-200 main-cart">
+        <div className="flex h-4/5 flex-col overflow-y-scroll bg-white rounded-lg shadow-xl w-4/6 main-card">
           <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+            <h1 className="text-center text-3xl font-bold">Cart's items</h1>
             <div className="mt-8">
               <div className="flow-root">
-                <ul>
+                <ul className="bg-blue-200 h-5/6 w-full">
                   {productsC.map((product) => (
                     <li key={product.id} className="flex py-6">
                       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -163,8 +169,9 @@ export default function Cart() {
 
                           <div className="flex">
                             <button
+                              onClick={OnRemove}
                               type="button"
-                              className="font-medium text-indigo-600 hover:text-indigo-500"
+                              className="font-medium text-orange-600 hover:text-orange-800"
                             >
                               Remove
                             </button>
@@ -174,19 +181,32 @@ export default function Cart() {
                     </li>
                   ))}
                   <hr />
-                  <div className="w-full h-20 text-center flex justify-center items-center">
-                    <button
-                      className="w-2/5 h-3/6 bg-red-900 rounded-lg"
-                      onClick={cleanCart}
-                    >
-                      Clean cart
-                    </button>
-                    <button className="w-2/5 h-3/6 bg-red-100 rounded-lg">
-                      Checkout
-                    </button>
-                  </div>
                 </ul>
               </div>
+            </div>
+          </div>
+          <div className="w-full bg-white flex h-16 bottom-0 pt-3">
+            <div className="w-1/3 text-center">
+              <button
+                className="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+                onClick={OnCleanCart}
+              >
+                Buy more...
+              </button>
+            </div>
+
+            <div className="w-1/3 text-center">
+              <button className=" text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+                Checkout
+              </button>
+            </div>
+            <div className="w-1/3 text-center">
+              <button
+                className="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+                onClick={OnCleanCart}
+              >
+                Clean cart
+              </button>
             </div>
           </div>
         </div>

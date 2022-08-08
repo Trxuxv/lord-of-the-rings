@@ -7,12 +7,14 @@ import React from "react";
 import "./index.css";
 
 export default function Home() {
-  if (localStorage.getItem("cart") === null) {
-    console.log("cart is empty");
-  }
-
   const initialState = [];
   const [cart, setItemCart] = useState(initialState);
+
+  if (localStorage.getItem("cart") === null) {
+    console.log("cart is empty");
+  } else {
+    // setItemCart(localStorage.getItem("cart").split());
+  }
 
   const addObjectToArray = (obj) => {
     var name = itemsLR.find((x) => x.id === obj).name;
@@ -186,80 +188,82 @@ export default function Home() {
       <div className="w-full h-screen overflow-x-hidden">
         <div id="snackbar" className="rounded-lg bg-red-200"></div>
         {/* Menu */}
-        <nav className="w-full h-16 flex justify-center items-center cursor-pointer shadow-2xl">
-          <div className="w-full h-full flex justify-center items-center cursor-pointer bg-gradient-to-r from-slate-600 to-orange-200  rounded-r-full">
-            <Link className="w-1/6 float-left logo h-10 ml-2" to="/">
-              {" "}
-            </Link>
-            <div className="w-2/6 h-full"> </div>
-            <div className="w-1/6 "></div>
-            <div className="w-1/6 "></div>
-          </div>
-
-          <div className="w-full h-16 w-3/6 flex justify-center items-center cursor-pointer bg-white rounded-r-full"></div>
-
-          {menu.map((m) => {
-            return (
-              <Link
-                to={`${m.link}`}
-                className="w-1/6 font-bold text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100"
-              >
-                {m.name}
+        <div className="bg-white w-full h-16">
+          <nav className="w-full h-16 flex justify-center items-center cursor-pointer shadow-2xl ">
+            <div className="w-full h-full flex justify-center items-center cursor-pointer bg-gradient-to-r from-slate-600 to-orange-200  rounded-r-full ">
+              <Link className="w-1/6 float-left logo h-10 ml-2" to="/">
+                {" "}
               </Link>
-            );
-          })}
-          <Link
-            onClick={saveCart}
-            to="cart"
-            className={
-              cart.length === 0
-                ? "w-1/6 font-bold text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100 pointer-events-none"
-                : "w-1/6 font-bold text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100"
-            }
-          >
-            Cart
-            <div className="w-10 h-6 ml-2 mt-2">
-              <svg
-                aria-hidden="true"
-                className="w-5 h-5 text-slate-600"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-              </svg>
-              <div className="cart-icon mb-6 text-white text-xs w-4 flex justify-center items-center h-4 font-bold bg-red-600 rounded-full">
-                {cart.length}
+              <div className="w-2/6 h-full"> </div>
+              <div className="w-1/6 "></div>
+              <div className="w-1/6 "></div>
+            </div>
+
+            <div className="w-full h-16 w-3/6 flex justify-center items-center cursor-pointer bg-white rounded-r-full"></div>
+
+            {menu.map((m) => {
+              return (
+                <Link
+                  to={`${m.link}`}
+                  className="w-1/6 bg-white font-bold text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100"
+                >
+                  {m.name}
+                </Link>
+              );
+            })}
+            <Link
+              onClick={saveCart}
+              to="cart"
+              className={
+                cart.length === 0
+                  ? "w-1/6 font-bold bg-white text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100 pointer-events-none"
+                  : "w-1/6 font-bold bg-white text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100"
+              }
+            >
+              Cart
+              <div className="w-10 h-6 ml-2 mt-2 ">
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5 text-slate-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+                </svg>
+                <div className="cart-icon mb-6 text-white text-xs w-4 flex justify-center items-center h-4 font-bold bg-red-600 rounded-full">
+                  {cart.length}
+                </div>
+              </div>
+            </Link>
+            <div
+              onClick={logout}
+              className="w-1/6 font-bold text-slate-600 bg-white h-full flex items-center justify-center text-center hover:bg-gray-100"
+            >
+              Logout
+              <div className="w-10 h-6 ml-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                  />
+                </svg>
               </div>
             </div>
-          </Link>
-          <div
-            onClick={logout}
-            className="w-1/6 font-bold text-slate-600  h-full flex items-center justify-center text-center hover:bg-gray-100"
-          >
-            Logout
-            <div className="w-10 h-6 ml-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                />
-              </svg>
-            </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
         {/* <div
           className="w-full h-10 flex justify-center items-center  cursor-pointer"
           style={{ background: "rgb(230 227 216)" }}
-        >
+          >
           <div className="w-1/6 text-center"></div>
           <div className="w-1/6 text-center"></div>
           <div className="w-1/6 text-center"></div>
