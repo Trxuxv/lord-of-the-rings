@@ -8,7 +8,7 @@ export default function Home() {
 
   const addObjectToArray = (obj) => {
     var name = itemsLR.find((x) => x.id === obj).name;
-    var message = "Item " + name + " added";
+    var message = name + " added to cart!";
 
     setEmployees((current) => [...current, obj]);
 
@@ -24,22 +24,19 @@ export default function Home() {
   return (
     <div className="w-full h-screen overflow-x-hidden">
       <div id="snackbar" className="rounded-lg bg-red-200"></div>
-      <nav className="w-full h-16 flex justify-center items-center cursor-pointer">
+      <nav className="w-full h-16 flex justify-center items-center cursor-pointer shadow-2xl">
         <div className="w-1/6 float-left logo h-10 ml-4"></div>
         <div className="w-2/6 "></div>
         <div className="w-1/6 "></div>
         <div className="w-1/6 "></div>
         {menu.map((m) => {
           return (
-            <div className="w-1/6 font-bold text-slate-600  text-center">
+            <div className="w-1/6 font-bold text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100">
               {m.name}
             </div>
           );
         })}
-        <div className="w-1/6 font-bold text-slate-600 text-center">
-          Profile
-        </div>
-        <div className="w-1/6 font-bold text-slate-600 flex justify-center items-center text-center">
+        <div className="w-1/6 font-bold text-slate-600  h-full flex items-center justify-center text-center hover:bg-gray-100">
           Cart
           <div className="w-10 h-6 ml-2 mt-2">
             <svg
@@ -58,7 +55,7 @@ export default function Home() {
         </div>
         <div
           onClick={logout}
-          className="w-1/6 font-bold text-slate-600 flex justify-center items-center  text-center"
+          className="w-1/6 font-bold text-slate-600  h-full flex items-center justify-center text-center hover:bg-gray-100"
         >
           Logout
           <div className="w-10 h-6 ml-2">
@@ -137,7 +134,7 @@ export default function Home() {
           </h1>
           <div className="w-full grid grid-cols-4">
             {itemsLR.map((item) => (
-              <div className="card bg-white m-6 p-6 text-center rounded-lg">
+              <div className="card bg-white m-6 p-6 text-center rounded-lg shadow-2xl">
                 <img
                   className="rounded-lg border-2 border-slate-300"
                   src={require(`./../../assets/LR_Swords/${item.imageUrl}`)}
@@ -238,6 +235,10 @@ var menu = [
   {
     id: 2,
     name: "Items",
+  },
+  {
+    id: 3,
+    name: "Profile",
   },
 ];
 
