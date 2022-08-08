@@ -85,7 +85,7 @@ export default function Home() {
         <div className="w-1/6 text-center"></div>
         {categories.map((movie) => {
           return (
-            <div className="w-1/6 text-center h-full flex justify-center items-center rounded-b-lg mr-1">
+            <div className="w-1/6 text-center h-full flex justify-center items-center rounded-b-lg mr-1 hover:bg-amber-50">
               {movie.name}
             </div>
           );
@@ -111,10 +111,10 @@ export default function Home() {
             developed into a much larger work.
           </p>
           <div>
-            <button className="rounded-full border-2 border-black bg-black text-white py-2 px-5 text-2x1 mr-6">
+            <button className="rounded-full border-2 border-black bg-black text-white py-2 px-5 text-2x1 mr-6 hover:bg-white hover:text-black">
               Check the history
             </button>
-            <button className="rounded-full border-2 border-black bg-white text-black py-2 px-5 text-2x1">
+            <button className="rounded-full border-2 border-black bg-white text-black py-2 px-5 text-2x1 hover:bg-orange-900 hover:text-white hover:border-orange-900">
               Movies in order{" "}
             </button>
             <button></button>
@@ -162,8 +162,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer class="bg-gray-100 text-center">
-        <div class="px-6 pt-6">
+      <footer class="bg-white text-center">
+        <div class="px-6 pt-10">
           <form action="">
             <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
               <div class="md:ml-auto md:mb-6">
