@@ -1,7 +1,7 @@
 export default function Products() {
-    return (
-        <>
-            <h1 className="text-black">Products</h1>
-        </>
-    );
+  return (
+    <>
+      <div className="h-5/6 bg-red-200 w-full">h1</div>
+    </>
+  );
 }
