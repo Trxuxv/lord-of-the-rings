@@ -8,14 +8,19 @@ import React from "react";
 import "./index.css";
 
 export default function Home() {
+  if (localStorage.getItem("cart") === null) {
+    console.log("cart is empty");
+  }
+
   const initialState = [];
-  const [cart, setEmployees] = useState(initialState);
+  const [cart, setItemCart] = useState(initialState);
 
   const addObjectToArray = (obj) => {
     var name = itemsLR.find((x) => x.id === obj).name;
     var message = name + " added to cart!";
+    setItemCart((current) => [...current, obj]);
+    localStorage.setItem("cart", cart);
 
-    setEmployees((current) => [...current, obj]);
     var snackbar = document.getElementById("snackbar");
     snackbar.className = "show";
     setTimeout(function () {
@@ -31,8 +36,12 @@ export default function Home() {
   }
 
   function saveCart() {
-    console.log(cart)
-    localStorage.setItem("cart", cart)
+    console.log(localStorage.getItem("cart"));
+    if (cart.length === 0) {
+      localStorage.setItem("cart", null);
+    } else {
+      localStorage.setItem("cart", cart);
+    }
   }
 
   const Content = () => (
@@ -169,10 +178,17 @@ export default function Home() {
         <div id="snackbar" className="rounded-lg bg-red-200"></div>
         {/* Menu */}
         <nav className="w-full h-16 flex justify-center items-center cursor-pointer shadow-2xl">
-          <div className="w-1/6 float-left logo h-10 ml-4"></div>
-          <div className="w-2/6 "></div>
-          <div className="w-1/6 "></div>
-          <div className="w-1/6 "></div>
+          <div className="w-full h-full flex justify-center items-center cursor-pointer bg-gradient-to-r from-slate-600 to-orange-200  rounded-r-full">
+            <Link className="w-1/6 float-left logo h-10 ml-2" to="/">
+              {" "}
+            </Link>
+            <div className="w-2/6 h-full"> </div>
+            <div className="w-1/6 "></div>
+            <div className="w-1/6 "></div>
+          </div>
+
+          <div className="w-full h-16 w-3/6 flex justify-center items-center cursor-pointer bg-white rounded-r-full"></div>
+
           {menu.map((m) => {
             return (
               <Link
@@ -186,7 +202,11 @@ export default function Home() {
           <Link
             onClick={saveCart}
             to="cart"
-            className="w-1/6 font-bold text-slate-600  h-full flex items-center justify-center text-center hover:bg-gray-100"
+            className={
+              cart.length === 0
+                ? "w-1/6 font-bold text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100 pointer-events-none"
+                : "w-1/6 font-bold text-slate-600 h-full flex items-center justify-center text-center hover:bg-gray-100"
+            }
           >
             Cart
             <div className="w-10 h-6 ml-2 mt-2">
@@ -227,7 +247,7 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        <div
+        {/* <div
           className="w-full h-10 flex justify-center items-center  cursor-pointer"
           style={{ background: "rgb(230 227 216)" }}
         >
@@ -244,7 +264,7 @@ export default function Home() {
           <div className="w-1/6 text-center"></div>
           <div className="w-1/6 text-center"></div>
           <div className="w-1/6 text-center"></div>
-        </div>
+        </div> */}
 
         {/* Content */}
         <Routes>
@@ -277,24 +297,24 @@ var menu = [
   },
 ];
 
-var categories = [
-  {
-    id: 1,
-    name: "Swords",
-  },
-  {
-    id: 2,
-    name: "Potions",
-  },
-  {
-    id: 3,
-    name: "Books",
-  },
-  {
-    id: 4,
-    name: "Cities",
-  },
-];
+// var categories = [
+//   {
+//     id: 1,
+//     name: "Swords",
+//   },
+//   {
+//     id: 2,
+//     name: "Potions",
+//   },
+//   {
+//     id: 3,
+//     name: "Books",
+//   },
+//   {
+//     id: 4,
+//     name: "Cities",
+//   },
+// ];
 
 var itemsLR = [
   {
