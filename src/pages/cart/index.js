@@ -105,10 +105,6 @@ function OnCleanCart() {
   document.location.reload(true);
 }
 
-function OnRemove() {
-  alert("remove");
-}
-
 export default function Cart() {
   if (localStorage.getItem("cart") === null) {
     return (
@@ -132,6 +128,12 @@ export default function Cart() {
       productsC.push(item);
     });
 
+    function OnRemove(id) {
+      var newCart = productsC.filter((x) => x.id === id);
+      productsC = newCart;
+      document.location.reload(true);
+    }
+
     return (
       <div className="w-full flex justify-center items-center bg-gradient-to-r from-slate-400 to-orange-200 main-cart">
         <div className="flex h-4/5 flex-col overflow-y-scroll bg-white rounded-lg shadow-xl w-4/6 main-card">
@@ -139,9 +141,12 @@ export default function Cart() {
             <h1 className="text-center text-3xl font-bold">Cart's items</h1>
             <div className="mt-8">
               <div className="flow-root">
-                <ul className="bg-blue-200 h-5/6 w-full">
+                <ul className="h-5/6 w-full px-2">
                   {productsC.map((product) => (
-                    <li key={product.id} className="flex py-6">
+                    <li
+                      key={product.id}
+                      className="flex py-6 bg-gray-100 p-4 mb-2 rounded-lg"
+                    >
                       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                         <img
                           src={require(`./../../assets/LR_Swords/${product.imageUrl}`)}
@@ -169,7 +174,7 @@ export default function Cart() {
 
                           <div className="flex">
                             <button
-                              onClick={OnRemove}
+                              onClick={() => OnRemove(product.id)}
                               type="button"
                               className="font-medium text-orange-600 hover:text-orange-800"
                             >
@@ -180,15 +185,15 @@ export default function Cart() {
                       </div>
                     </li>
                   ))}
-                  <hr />
                 </ul>
               </div>
             </div>
           </div>
-          <div className="w-full bg-white flex h-16 bottom-0 pt-3">
+          <hr />
+          <div className="w-full bg-white flex h-24  bg-gradient-to-r from-slate-800 to-orange-300 bottom-0 pt-5">
             <div className="w-1/3 text-center">
               <button
-                className="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+                className="text-white bg-emerald-500 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-slate-800"
                 onClick={OnCleanCart}
               >
                 Buy more...
