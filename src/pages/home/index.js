@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Product from "./../products/index";
 import Profile from "./../profile/index";
+import Done from "../payment/done";
 import Cart from "./../cart/index";
 import { useState } from "react";
+import Payment from "../payment";
 import React from "react";
 import "./index.css";
 
@@ -286,6 +288,8 @@ export default function Home() {
           {/* <Route path="items" element={<Items />} /> */}
           <Route path="profile" element={<Profile />} />
           <Route path="product" element={<Product />} />
+          <Route path="done" element={<Done />} />
+          <Route path="payment" element={<Payment />} />
         </Routes>
       </div>
     </BrowserRouter>
