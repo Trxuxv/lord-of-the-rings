@@ -9,7 +9,7 @@ export default function Done() {
     const [goHome, setGoHome] = useState(initialStateHome);
 
     setTimeout(myGreeting, 1300);
-    setTimeout(GoHome, 5000);
+    setTimeout(GoHome, 3000);
 
     function GoHome() {
         setGoHome((true));

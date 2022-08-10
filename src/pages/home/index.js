@@ -5,6 +5,7 @@ import Done from "../payment/done";
 import Cart from "./../cart/index";
 import { useState } from "react";
 import Payment from "../payment";
+import Item from "../items";
 import React from "react";
 import "./index.css";
 
@@ -97,7 +98,7 @@ export default function Home() {
               Lord of the Rings
             </b>
           </h1>
-          <div className="w-full grid grid-cols-4">
+          <div className="w-full grid grid-cols-3">
             {itemsLR.map((item) => (
               <div className="card bg-white m-6 p-6 text-center rounded-lg shadow-2xl">
                 <img
@@ -105,7 +106,12 @@ export default function Home() {
                   src={require(`./../../assets/LR_Swords/${item.imageUrl}`)}
                   alt={item.imageUrl}
                 />
-                <div className="m-2 text-center h-14">{item.name}</div>
+
+                <Link to={`item/${item.id}`}>
+                  <div className="m-2 text-center h-14">{item.name}
+                  </div></Link>
+                <p className="text-sm font-medium">${item.price}</p>
+
                 <button
                   onClick={() => addObjectToArray(item.id)}
                   type="button"
@@ -285,6 +291,7 @@ export default function Home() {
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="item/:id" element={<Item />} />
           <Route path="profile" element={<Profile />} />
           <Route path="product" element={<Product />} />
           <Route path="done" element={<Done />} />
@@ -329,63 +336,99 @@ var menu = [
 
 var itemsLR = [
   {
-    id: 1,
+    id: "1",
     name: "Lord Of The Rings Spear Of Eomer",
     imageUrl: "1.jfif",
+    price: 98.22,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 2,
+    id: "2",
     name: "Lord Of The Rings Sword Of Théodred",
     imageUrl: "2.jfif",
+    price: 104.02,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 3,
+    id: "3",
     name: "The Mace Of Sauron And Ring Red Eye Edition With War Banner",
     imageUrl: "3.jfif",
+    price: 63.77,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 4,
+    id: "4",
     name: "Lord Of The Rings Helm Of King Theoden",
     imageUrl: "4.jfif",
+    price: 274.02,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 5,
+    id: "5",
     name: "LOTR™ - STING™ The Sword Of Frodo Baggins With Wall Plaque",
     imageUrl: "5.jfif",
+    price: 78.50,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 6,
+    id: "6",
     name: "LOTR™ Officially Licensed Glamdring Sword Of Gandalf",
     imageUrl: "6.jfif",
+    price: 85.20,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 7,
+    id: "7",
     name: "Sword Of The Witch King",
     imageUrl: "7.jfif",
+    price: 91.60,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 8,
+    id: "8",
     name: "Sword Of Narsil",
     imageUrl: "8.jfif",
+    price: 47.18,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 9,
+    id: "9",
     name: "Lord Of The Rings Ringwraith Sword",
     imageUrl: "9.jfif",
+    price: 24.01,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 10,
+    id: "10",
     name: "Officially Licensed Hadhafang Sword Of Arwen Evenstar",
     imageUrl: "10.jfif",
+    price: 99.90,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 11,
+    id: "11",
     name: "The Lord Of The Rings Sword Of Strider",
     imageUrl: "11.jfif",
+    price: 214.02,
+    color: "Salmon",
+    quantity: 1,
   },
   {
-    id: 12,
+    id: "12",
     name: "Sting Scabbard",
     imageUrl: "12.jfif",
+    price: 324.02,
+    color: "Salmon",
+    quantity: 1,
   },
 ];
