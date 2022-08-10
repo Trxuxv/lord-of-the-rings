@@ -121,14 +121,19 @@ export default function Auth() {
     return (
         <>
             <div className="w-full h-screen flex justify-center items-center main">
-                <div className="m-auto w-4/5 h-4/5 bg-white rounded-lg flex container">
+                    <div className='login-responsive m-auto w-4/5 h-4/5 bg-white rounded-lg flex container-responsive justify-center items-center'>
+                        <div className='font-medium text-2xl'>
+                            Only available on desktop.
+                        </div>
+                    </div>
+                <div className="m-auto w-4/5 h-4/5 bg-white rounded-lg flex container-normal">
                     <div className="w-2/5 text-center flex flex-col pt-6">
-                        <div className="pt-10 px-20 h-2/6  rounded-lg">
+                        <div className="pt-10 px-20 h-2/6 rounded-lg">
                             <div className="title w-20 ">
                             </div>
                         </div>
                         <div className="p-6">
-                            <div className="bg-gradient-to-r from-slate-200 to-orange-200 px-6 pb-4 text-left rounded-lg">
+                            <div className="bg-gradient-to-r from-slate-200 to-orange-200 px-6 pb-4 text-left rounded-lg login-div">
                                 <hr />
                                 <h2 className="text-center text-4xl font-bold mb-2 pt-3 pb-5">Sign in</h2>
                                 <div className="grid mt-2 md:grid-cols-2 md:gap-6">

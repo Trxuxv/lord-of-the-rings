@@ -19,7 +19,13 @@
   z-index: 2;
 }
 
-.container {
+.container-responsive{
+  display: none;
+  z-index: 3;
+  box-shadow: 0 0 15px 10px #807562;
+}
+
+.container-normal {
   z-index: 3;
   box-shadow: 0 0 15px 10px #807562;
 }
@@ -39,4 +45,30 @@
   border-radius: 5%;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container-responsive{
+    z-index: 3;
+    box-shadow: 0 0 15px 10px #807562;
+  }
+  .container-normal {
+    display: none;
+  }
+
+  .land {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+  
+  .login-div{
+    display: none;
+  }
+
+  .login-responsive{
+    display: flex;
+  }
 }
