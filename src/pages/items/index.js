@@ -11,6 +11,7 @@ export default function Item() {
       price: 98.22,
       color: "Salmon",
       quantity: 1,
+      detail: 'Éomer was a captain of the king’s cavalry, Marshal of the Mark, and one of Rohan’s mightiest warriors. He bravely fought alongside King Theoden against the forces of Mordor at the battle of Helm’s Deep and on the Pelennor Fields to protect the white city of Minas Tirith and the hope of all Middle-earth. When the Haradrim army attacked from atop their great beasts of war, the Mûmakil, Éomer led a charge against them. He took two of the beasts down with one throw of his mighty spear. This authentically detailed replica is a reproduction of the actual filming prop built by Weta Workshop and used in “The Lord Of The Rings” films presented by New Line Cinema. The 84” long spear is crafted of wood and reinforced polyresin cold cast steel, with precisely-molded details and coloring. It is presented with a polyresin wall display, sculpted in the horse iconography of Rohan, and includes a certificate of authenticity. The spear comes in two sections that are easy to assemble.'
     },
     {
       id: "2",
@@ -19,6 +20,7 @@ export default function Item() {
       price: 104.02,
       color: "Salmon",
       quantity: 1,
+      detail: 'The sword of Théodred, fallen son of King Théoden. Théodred ‘s sword was the mate to the sword of Éowyn, his cousin. It was virtually identical, except for its green enameling on the hilt and green leather grip. This authentically detailed sword replica is a reproduction of the actual filming prop sword crafted by Weta Workshop of New Zealand and used in THE LORD OF THE RINGS: THE TWO TOWERS™ film presented by New Line Cinema. This meticulously detailed sword, with an overall length of 36 1/2", features a solid metal guard and pommel with an antique brass plated finish and a tough TPU grip. The 30 1/8" false-edged blade is crafted of tempered stainless steel with a wide filler groove. Each sword is individually serial numbered and presented with a wood wall display and certificate of authenticity.'
     },
     {
       id: "3",
@@ -27,6 +29,7 @@ export default function Item() {
       price: 63.77,
       color: "Salmon",
       quantity: 1,
+      detail: "A replica of the massive mace wielded by the Dark Lord Sauron in the prologue of The Lord of the Rings: The Fellowship of the Ring. When Sauron's forces battled the Last Alliance of Elves and Men on the slopes of Mount Doom, Sauron emerged on the battlefield wearing blackened steel armor. In one iron gauntlet he held a massive six-bladed, black iron war mace. On one finger he wore the source of his power, The One Ring. With every swing of this terrible weapon Sauron crushed his foes, sending intimidation and fear throughout the ranks of all who would stand against him. This replica of the actor scale prop used in the movie is crafted of reinforced fiberglass-resin with an aged iron finish. Close attention to detail is a top priority in every piece, down to the intaglio-etched surface and corroded metal coloring. The oversized One Ring worn by Sauron is also included, crafted in gold plated solid metal. Displays on a polystone wall mount (mounting hardware and instructions included)."
     },
     {
       id: "4",
@@ -35,6 +38,7 @@ export default function Item() {
       price: 274.02,
       color: "Salmon",
       quantity: 1,
+      detail: 'Théoden’s armor and weapons were the finest in Rohan. His steel helm was ornately engraved and enameled, featuring a horse head crest. The surface was highly decorated with sun and horse motifs of bronze and copper. The leather neck guard was embossed with Rohirric designs. This authentically detailed replica is a reproduction of the actual filming prop built by Weta Workshop and used in “The Lord Of The Rings” films presented by New Line Cinema. The helm is crafted of reinforced polyresin and genuine leather, with precisely-molded details and coloring. It is presented with a polystone and wood display, sculpted in the shape of Théoden’s neck and shoulder armor. It includes a certificate of authenticity, and each piece is individually serial numbered on a metal shield.'
     },
     {
       id: "5",
@@ -43,6 +47,7 @@ export default function Item() {
       price: 78.50,
       color: "Salmon",
       quantity: 1,
+      detail: "With over 100 million copies sold in over 40 languages, millions have grown up with The Lord of the Rings, the classic epic tale considered by millions to be the greatest fantasy-adventure story ever told. J.R.R. Tolkien's phenomenal epic trilogy chronicles the struggle between good and evil for possession of a magical ring. The book trilogy, named the most popular book of the 20th Century, has been presented in a series of feature films from New Line Cinema. Solid metal guard and pommel, antique metal finish. Plastic handle, Elven vine design on 420 stainless steel blade. Wood display plaque and certificate of authenticity. 22' overall. 15' blade."
     },
     {
       id: "6",
@@ -51,6 +56,7 @@ export default function Item() {
       price: 85.20,
       color: "Salmon",
       quantity: 1,
+      detail: 'With over 100 million copies sold in over 40 languages, millions have grown up with The Lord of the Rings, the classic epic tale considered by millions to be the greatest fantasy-adventure story ever told. J.R.R. Tolkiens phenomenal epic trilogy chronicles the struggle between good and evil for possession of a magical ring. The book trilogy, named the most popular book of the 20th Century, has been presented in a series of feature films from New Line Cinema. Solid metal guard and pommel, antique metal finish. Genuine leather-wrapped grip. 420 stainless steel blade, false-edged. Wood display plaque. Certificate of authenticity. 47 5/8" overall. 35 1/4" blade.'
     },
     {
       id: "7",
@@ -59,6 +65,7 @@ export default function Item() {
       price: 91.60,
       color: "Salmon",
       quantity: 1,
+      detail: 'With over 100 million copies sold in over 40 languages, millions have grown up with The Lord of the Rings, the classic epic tale considered by millions to be the greatest fantasy-adventure story ever told. J.R.R. Tolkiens phenomenal epic trilogy chronicles the struggle between good and evil for possession of a magical ring. The book trilogy, named the most popular book of the 20th Century, has been presented in a series of feature films from New Line Cinema. Solid metal cross guard and pommel, antique metal finish. Genuine leather-wrapped grip. 420 stainless steel blade, false-edged. Wood display plaque. Certificate of authenticity. 54 5/8" overall. 39 3/4" blade.'
     },
     {
       id: "8",
@@ -67,6 +74,7 @@ export default function Item() {
       price: 47.18,
       color: "Salmon",
       quantity: 1,
+      detail: 'With over 100 million copies sold in over 40 languages, millions have grown up with The Lord of the Rings, the classic epic tale considered by millions to be the greatest fantasy-adventure story ever told. J.R.R. Tolkiens phenomenal epic trilogy chronicles the struggle between good and evil for possession of a magical ring. The book trilogy, named the most popular book of the 20th Century, has been presented in a series of feature films from New Line Cinema. Solid metal cross guard and pommel, antique silver plated finish. 24-K gold plated fittings. Genuine leather-wrapped grip. 420 stainless steel blade, false-edged. Wood display plaque. Certificate of authenticity. 52 7/8" overall. 40 5/8" blade.'
     },
     {
       id: "9",
@@ -75,6 +83,7 @@ export default function Item() {
       price: 24.01,
       color: "Salmon",
       quantity: 1,
+      detail: "Ringwraiths, also called Dark Riders or the Nazgul, are the shadow servants of Sauron. There are nine of them to represent the nine mortal kings that Sauron corrupted with his Ring of Power. They can sense when the Ring of Power is near and can see the Ringbearer even more clearly when he puts it on. The Ringwraith's sword was built by armorers of the dark land of Mordor, under the command of their evil master Sauron. This authentically detailed replica is a reproduction of the actual filming prop built by Weta Workshop and used in “The Lord Of The Rings” films presented by New Line Cinema. This massive sword features an authentic battle-worn solid metal crossguard and pommel, genuine leather-wrapped grips and a rat-tail tang construction. The 39 3/4” acid-etched, tempered 420 J2 stainless steel blade is false-edged and has a thickness of 1/4”. Included is a 10”x 13 7/8”x 3/4” wooden display plaque silk-screened with the mark of the Eye of Sauron, master of the Ringwraiths. Also includ"
     },
     {
       id: "10",
@@ -83,6 +92,7 @@ export default function Item() {
       price: 99.90,
       color: "Salmon",
       quantity: 1,
+      detail: "With over 100 million copies sold in over 40 languages, millions have grown up with The Lord of the Rings, the classic epic tale considered by millions to be the greatest fantasy-adventure story ever told. J.R.R. Tolkien's phenomenal epic trilogy chronicles the struggle between good and evil for possession of a magical ring. The book trilogy, named the most popular book of the 20th Century, has been presented in a series of feature films from New Line Cinema. Solid metal pommel. Wooden handgrip, Elven vine design. 420 stainless steel blade, sharp-edged. Wooden display stand. Certificate of authenticity. 38 1/8' overall. 30' blade."
     },
     {
       id: "11",
@@ -91,6 +101,7 @@ export default function Item() {
       price: 214.02,
       color: "Salmon",
       quantity: 1,
+      detail: 'With over 100 million copies sold in over 40 languages, millions have grown up with The Lord of the Rings, the classic epic tale considered by millions to be the greatest fantasy-adventure story ever told. J.R.R. Tolkiens phenomenal epic trilogy chronicles the struggle between good and evil for possession of a magical ring. The book trilogy, named the most popular book of the 20th Century, has been presented in a series of feature films from New Line Cinema. Solid metal cross guard and pommel, antique metal finish. Genuine leather-wrapped grip. 420 stainless steel blade, false-edged. Wood display plaque and certificate of authenticity. 47 1/4" overall. 36" blade.'
     },
     {
       id: "12",
@@ -99,6 +110,7 @@ export default function Item() {
       price: 324.02,
       color: "Salmon",
       quantity: 1,
+      detail: "With over 100 million copies sold in over 40 languages, millions have grown up with The Lord of the Rings, the classic epic tale considered by millions to be the greatest fantasy-adventure story ever told. J.R.R. Tolkien's phenomenal epic trilogy chronicles the struggle between good and evil for possession of a magical ring. The book trilogy, named the most popular book of the 20th Century, has been presented in a series of feature films from New Line Cinema. Fits UC1264 and UC1424, each sold separately. Solid metal collar and tip, antique metal finish. Genuine leather wrap. Certificate of authenticity. 17 3/8' overall."
     },
   ];
 
@@ -106,12 +118,10 @@ export default function Item() {
 
   const item = itemsLR.find(x => x.id === id);
 
-
-
   return (
     <>
-      <section class="text-gray-700 body-font overflow-hidden bg-white">
-        <div class="container px-5 py-24 mx-auto">
+      <section class="text-gray-700 body-font mt-12 bg-transparent">
+        <div class="container px-5 py-24 mx-auto rounded-lg">
           <div class="lg:w-4/5 mx-auto flex flex-wrap">
             <img class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src={require(`./../../assets/LR_Swords/${item.imageUrl}`)} alt={item.imageUrl} />
             <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
@@ -119,19 +129,19 @@ export default function Item() {
               <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{item.name}</h1>
               <div class="flex mb-4">
                 <span class="flex items-center">
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-orange-600" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-orange-600" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-orange-600" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-orange-600" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-orange-600" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <span class="text-gray-600 ml-3">4 Reviews</span>
@@ -154,34 +164,10 @@ export default function Item() {
                   </a>
                 </span>
               </div>
-              <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
-              <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-                <div class="flex">
-                  <span class="mr-3">Color</span>
-                  <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                </div>
-                <div class="flex ml-6 items-center">
-                  <span class="mr-3">Size</span>
-                  <div class="relative">
-                    <select class="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10">
-                      <option>SM</option>
-                      <option>M</option>
-                      <option>L</option>
-                      <option>XL</option>
-                    </select>
-                    <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="flex">
+              <p class="leading-relaxed">{item.detail}</p>
+              <div class="flex mt-10">
                 <span class="title-font font-medium text-2xl text-gray-900">${item.price}</span>
-                <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Buy</button>
+                <button class="flex ml-auto text-white bg-orange-700 border-0 py-2 px-6 focus:outline-none hover:bg-orange-900 rounded">Buy</button>
                 <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
