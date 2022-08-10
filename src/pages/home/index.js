@@ -92,9 +92,9 @@ export default function Home() {
       </div>
       <div className="w-full h-auto back-prod py-10 bg-gradient-to-r from-slate-400 to-orange-200">
         <div className="products">
-          <h1 className="text-5xl text-center py-10 font-bold">
+          <h1 className="text-3xl text-center py-10 font-semibold">
             Check the main items of{" "}
-            <b className="text-5xl font-bold text-orange-900">
+            <b className="text-3xl font-semibold text-orange-900">
               Lord of the Rings
             </b>
           </h1>
