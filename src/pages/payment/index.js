@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import './index.css'
 
 export default function Payment() {
@@ -88,7 +89,9 @@ export default function Payment() {
 
                             <button className="mt-8 border border-transparent hover:border-orange-400 bg-orange-900 hover:bg-orange-900 text-white hover:text-white flex justify-center items-center py-4 rounded w-full">
                                 <div>
-                                    <a href="done"><p className="text-base leading-4">Pay ${total}</p></a>
+                                    <Link to="/done">
+                                        <p className="text-base leading-4">Pay ${total}</p>
+                                    </Link>
                                 </div>
                             </button>
                         </div>

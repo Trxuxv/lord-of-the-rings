@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import "./index.css";
 
@@ -223,13 +224,12 @@ export default function Cart() {
                 </button>
               </a>
             </div>
-
             <div className="w-1/3 text-center">
-              <a href="payment">
+              <Link to="/payment">
                 <button onClick={OnChekout} className=" text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
                   Checkout
                 </button>
-              </a>
+              </Link>
             </div>
             <div className="w-1/3 text-center">
               <button

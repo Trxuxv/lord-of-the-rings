@@ -285,7 +285,6 @@ export default function Home() {
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="cart" element={<Cart />} />
-          {/* <Route path="items" element={<Items />} /> */}
           <Route path="profile" element={<Profile />} />
           <Route path="product" element={<Product />} />
           <Route path="done" element={<Done />} />
